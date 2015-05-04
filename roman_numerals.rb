@@ -1,5 +1,5 @@
 class RomanNumeral
-  
+
   NUMERAL_HASH = {
       1000=> "M",
       900=> "CM",
@@ -27,4 +27,11 @@ class RomanNumeral
     roman_numeral.join("")
   end
   
+end
+
+class ArabicNumeral
+
+  def self.convert(roman_number)
+    1
+  end
 end
