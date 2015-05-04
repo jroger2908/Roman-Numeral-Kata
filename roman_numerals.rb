@@ -31,25 +31,27 @@ end
 
 class ArabicNumeral
 
-  ARABIC_HASH = {
-      "M" => 1000,
-      "D" => 500,
-      "C" => 100,
-      "L" => 50,
-      "X" => 10,
-      "V" => 5,
-      "I" => 1
-  }
-
   def self.convert(roman_numeral)
-    arabic_number = []
-    roman_numeral.split('').collect do |letter|
-      arabic_number << ARABIC_HASH[letter]
+    arabic_number = 0
+    until roman_numeral.empty?
+      case 
+      when roman_numeral.start_with?('M') then value = 1000
+      when roman_numeral.start_with?('D') then value = 500
+      when roman_numeral.start_with?('C') then value = 100
+      when roman_numeral.start_with?('L') then value = 50
+      when roman_numeral.start_with?('X') then value = 10
+      when roman_numeral.start_with?('V') then value = 5
+      when roman_numeral.start_with?('I') then value = 1
+      end
+      arabic_number += value
+      roman_numeral.slice!(0, 1)
     end
-    arabic_number.inject(:+)
+    arabic_number
   end
 
 end
+
+
 
 
 
