@@ -1,8 +1,30 @@
 class RomanNumeral
+  
+  NUMERAL_HASH = {
+      1000=> "M",
+      900=> "CM",
+      500=> "D",
+      400=> "CD",
+      100=> "C",
+      90=> "XC",
+      50=> "L",
+      40=> "XL",
+      10=> "X",
+      9=> "IX",
+      5=> "V",
+      4=> "IV",
+      1=> "I"
+  }
+
   def self.convert(number)
-    return "MCMLXXXIX" if number == 1989
-    return "MLXVI" if number === 1066
-    return "III" if number === 3
-    "I"
+    roman_numeral = []
+    NUMERAL_HASH.each do |arabic, roman|
+      while number >= arabic
+        roman_numeral << roman
+        number -= arabic
+      end
+    end
+    roman_numeral.join("")
   end
+  
 end
