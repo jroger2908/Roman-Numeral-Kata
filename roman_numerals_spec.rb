@@ -10,6 +10,10 @@ describe "RomanNumeral" do
     it "converts 3 to III" do
       expect(RomanNumeral.convert(3)).to eq("III")
     end
+
+    it "converts 1066 to MLXVI" do
+      expect(RomanNumeral.convert(1066)).to eq("MLXVI")
+    end
   end
 
 end
