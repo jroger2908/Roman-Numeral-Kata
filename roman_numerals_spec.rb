@@ -36,6 +36,10 @@ describe "ArabicNumeral" do
     it "converts IX to 9" do
       expect(ArabicNumeral.convert("IX")).to eq(9)
     end
+
+    it "converts MLXVI to 1066" do
+      expect(ArabicNumeral.convert("MLXVI")).to eq(1066)
+    end
   end
 
 end
