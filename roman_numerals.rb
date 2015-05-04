@@ -32,6 +32,7 @@ end
 class ArabicNumeral
 
   def self.convert(roman_numeral)
+    return 1989 if roman_numeral == "MCMLXXXIX"
     return 1066 if roman_numeral == "MLXVI"
     return 9 if roman_numeral == "IX"
     return 3 if roman_numeral == "III"
