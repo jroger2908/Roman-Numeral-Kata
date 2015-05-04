@@ -14,6 +14,10 @@ describe "RomanNumeral" do
     it "converts 1066 to MLXVI" do
       expect(RomanNumeral.convert(1066)).to eq("MLXVI")
     end
+
+    it "converts 1989 to MCMLXXXIX" do
+      expect(RomanNumeral.convert(1989)).to eq("MCMLXXXIX")
+    end
   end
 
 end
