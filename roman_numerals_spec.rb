@@ -21,3 +21,13 @@ describe "RomanNumeral" do
   end
 
 end
+
+describe "ArabicNumeral" do
+
+  describe "convert" do
+    it "converts I to 1" do
+      expect(ArabicNumeral.convert("I")).to eq(1)
+    end
+  end
+
+end
